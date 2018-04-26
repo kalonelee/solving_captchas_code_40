@@ -1,0 +1,12 @@
+*.iml
+.idea/
+extracted_letter_images/
+extracted_letter_images_1/
+extracted_letter_images_2/
+gci/
+generated_captcha_images/
+generated_captcha_images_1/
+generated_captcha_images_2/
+img1/
+__pycache__/
+
