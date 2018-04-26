@@ -92,9 +92,9 @@ def removeLine(imgid):
 
 MODEL_FILENAME = "captcha_model.hdf5"
 MODEL_LABELS_FILENAME = "model_labels.dat"
-#CAPTCHA_IMAGE_FOLDER = "generated_captcha_images"
-CAPTCHA_IMAGE_FOLDER = "img1"
-OUTPUT_FOLDER = "gci"
+CAPTCHA_IMAGE_FOLDER = "generated_captcha_images"
+#CAPTCHA_IMAGE_FOLDER = "img1"
+#OUTPUT_FOLDER = "gci"
 
 # Load up the model labels (so we can translate model predictions to actual letters)
 with open(MODEL_LABELS_FILENAME, "rb") as f:
@@ -201,18 +201,18 @@ for (i,image_file) in enumerate(captcha_image_files):
     # Print the captcha's text
     captcha_text = "".join(predictions)
     #print("CAPTCHA text is: {}".format(captcha_text))
-    image = cv2.imread(image_file)
+    #image = cv2.imread(image_file)
 	# Get the folder to save the image in
-    save_path = os.path.join(OUTPUT_FOLDER)
+    #save_path = os.path.join(OUTPUT_FOLDER)
 
     # if the output directory does not exist, create it
-    if not os.path.exists(save_path):
-        os.makedirs(save_path)
+    #if not os.path.exists(save_path):
+    #    os.makedirs(save_path)
 
     # write the letter image to a file
 
-    p = os.path.join(save_path, "{}.bmp".format(captcha_text))
-    cv2.imwrite(p, image)
+    #p = os.path.join(save_path, "{}.bmp".format(captcha_text))
+    #cv2.imwrite(p, image)
 	
     # Show the annotated image
     #cv2.imshow("Output", output)
