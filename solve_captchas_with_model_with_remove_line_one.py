@@ -92,8 +92,8 @@ def removeLine(imgid):
     #newimg = Image.frombytes("1",(len(tempStr),y),str.encode(strImg))
     #newimg.save('im.png')
 
-MODEL_FILENAME = "captcha_model.hdf5"
-MODEL_LABELS_FILENAME = "model_labels.dat"
+MODEL_FILENAME = "/var/www/solving_captchas_code_40/captcha_model.hdf5"
+MODEL_LABELS_FILENAME = "/var/www/solving_captchas_code_40/model_labels.dat"
 #CAPTCHA_IMAGE_FOLDER = "generated_captcha_images"
 CAPTCHA_IMAGE_FOLDER = "/var/www/kygo.pw/api/Verify/upfile"
 #CAPTCHA_IMAGE_FOLDER = "img1"
