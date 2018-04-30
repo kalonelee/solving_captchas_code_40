@@ -94,7 +94,8 @@ def removeLine(imgid):
 
 MODEL_FILENAME = "captcha_model.hdf5"
 MODEL_LABELS_FILENAME = "model_labels.dat"
-CAPTCHA_IMAGE_FOLDER = "generated_captcha_images"
+#CAPTCHA_IMAGE_FOLDER = "generated_captcha_images"
+CAPTCHA_IMAGE_FOLDER = "/var/www/kygo.pw/api/Verify/upfile"
 #CAPTCHA_IMAGE_FOLDER = "img1"
 #OUTPUT_FOLDER = "gci"
 
