@@ -80,7 +80,7 @@ def removeLine(imgid):
     #print(strImg[0:-2])
     matrixImg=np.matrix(strImg[0:-2])
     #data=np.reshape(matrixImg,(y,len(tempStr)))
-    newImg=Image.fromarray(matrixImg)
+    newImg=Image.fromarray(np.uint8(matrixImg))
     return np.array(newImg.convert('RGB'))
     #newImg.show()
     #newImg.convert('RGB').save('im.png')
