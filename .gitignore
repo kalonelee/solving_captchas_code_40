@@ -9,4 +9,5 @@ generated_captcha_images_1/
 generated_captcha_images_2/
 img1/
 __pycache__/
+venv/
 
