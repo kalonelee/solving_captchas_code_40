@@ -109,17 +109,14 @@ model = load_model(MODEL_FILENAME)
 # Grab some random CAPTCHA images to test against.
 # In the real world, you'd replace this section with code to grab a real
 # CAPTCHA image from a live website.
-#captcha_image_files = list(paths.list_images(CAPTCHA_IMAGE_FOLDER))
+captcha_image_files = list(paths.list_images(CAPTCHA_IMAGE_FOLDER))
 #captcha_image_files = np.random.choice(captcha_image_files, size=(20,), replace=False)
 #captcha_image_files = np.random.choice(captcha_image_files, replace=False)
 # loop over the image paths
 counter = 0
 #for (i,image_file) in enumerate(captcha_image_files):
-#if getopt.getopt(sys.argv , "imgid")[1][1] != "":
-#image_file = "{}/{}.bmp".format(CAPTCHA_IMAGE_FOLDER ,getopt.getopt(sys.argv , "imgid:")[1][1])
-filename = "{}/{}".format(CAPTCHA_IMAGE_FOLDER ,getopt.getopt(sys.argv , "imgid:")[1][1])
-captcha_image_files = ["{}1.img".format(filename),"{}2.img".format(filename),"{}3.img".format(filename)]
-for (i,image_file) in enumerate(captcha_image_files):
+if getopt.getopt(sys.argv , "imgid")[1][1] != "":
+    image_file = "{}/{}.bmp".format(CAPTCHA_IMAGE_FOLDER ,getopt.getopt(sys.argv , "imgid:")[1][1])
     #print(image_file)
     filename = os.path.basename(image_file)
     #print(filename)
@@ -233,6 +230,6 @@ for (i,image_file) in enumerate(captcha_image_files):
     #else:
     #    print ( "CAPTCHA text is: {}  origin:{}".format(captcha_text, captcha_correct_text) )
     #print("[INFO] processing image {}/{} {}%".format(i + 1, len(captcha_image_files), counter/(i+1)*100 ))
-    print(captcha_text+"\n")
-#else:
-#    print("ERROR")
+    print(captcha_text)
+else:
+    print("ERROR")
